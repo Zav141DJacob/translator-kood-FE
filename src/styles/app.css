@@ -41,8 +41,13 @@
   justify-content: end;
 }
 
-.translate-button {
+#translate-button {
+  cursor: pointer;
   margin: 0 auto;
+}
+#translate-button:active {
+  position: relative;
+  top: 2px;
 }
 
 /* Using TailwindCSS responsiveness */

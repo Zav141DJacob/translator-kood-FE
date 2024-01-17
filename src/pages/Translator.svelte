@@ -5,8 +5,12 @@
     import targetLangs from "../consts/targetLang.json";
     import sourceLangs from "../consts/sourceLang.json";
 
-
-    let previous = 0;
+    type FormProps = {
+        text: string;
+        sourceLang: string;
+        targetLang: string;
+    };
+    let previous: FormProps;
     let isLoading = false;
     let placeholder = "Translation";
 
@@ -14,19 +18,29 @@
         event.preventDefault();
         isLoading = true;
 
-
         const target = event.target as HTMLFormElement;
-        const formBody = {
+        const formBody: FormProps = {
             text: target.text.value.trim(),
             sourceLang: target.sourceLang.value,
             targetLang: target.targetLang.value,
         };
 
         if (formBody.text.trim().length === 0) {
-            placeholder = "Text field can not be empty"
-            isLoading = false
-            return
+            placeholder = "Text field can not be empty";
+            isLoading = false;
+            return;
         }
+
+        // Preventing spamming
+        if (
+            formBody.text === previous?.text &&
+            formBody.sourceLang === previous?.sourceLang &&
+            formBody.targetLang === previous?.targetLang
+        ) {
+            isLoading = false;
+            return;
+        }
+        previous = formBody;
 
         fetch(`${BACKEND}/translate`, {
             method: "POST",
@@ -40,7 +54,7 @@
                     // Loading text removed and replaced with translated text
                     isLoading = false;
                     placeholder = jsonV.text;
-                    
+
                     // Fetch history from localStorage
                     const history = localStorage.getItem("history");
 
@@ -62,8 +76,14 @@
                             {
                                 text: target.text.value.trim(),
                                 translation: jsonV.text,
-                                sourceLang: sourceLangs.find((elem) => elem.short === target.sourceLang.value)?.long,
-                                targetLang: targetLangs.find((elem) => elem.short === target.targetLang.value)?.long,
+                                sourceLang: sourceLangs.find(
+                                    (elem) =>
+                                        elem.short === target.sourceLang.value,
+                                )?.long,
+                                targetLang: targetLangs.find(
+                                    (elem) =>
+                                        elem.short === target.targetLang.value,
+                                )?.long,
                                 date: formattedDate,
                             },
                             ...(history ? JSON.parse(history) : []),
@@ -78,7 +98,11 @@
 <div>
     <div id="translator-and-history">
         <Link to="/history" class="link" id="history-link">History</Link>
-        <form class="down-shadow" id="translator-widget" on:submit={handleSubmit}>
+        <form
+            class="down-shadow"
+            id="translator-widget"
+            on:submit={handleSubmit}
+        >
             <div id="translator-boxes">
                 <TranslatorBox isSource placeholder="Enter text" />
                 <div class="svg-container">
@@ -104,7 +128,7 @@
                 />
             </div>
             <div class="center-width">
-                <button class="translate-button">Translate</button>
+                <button id="translate-button">Translate</button>
             </div>
         </form>
     </div>
