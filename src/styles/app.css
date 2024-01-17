@@ -1,0 +1,64 @@
+#translator-and-history {
+  padding-top: 10%;
+}
+
+.translator-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#translator-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+#history-link {
+  margin-left: 15%;
+}
+
+#translator-widget {
+  padding: 2rem;
+  margin: 0 15%;
+  background-color: aliceblue;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#right-arrow {
+  transform: rotate(90deg);
+}
+
+.character-counter {
+  display: flex;
+  justify-content: end;
+}
+
+.translate-button {
+  margin: 0 auto;
+}
+
+/* Using TailwindCSS responsiveness */
+@media (min-width: 768px) {
+
+  #right-arrow {
+    transform: rotate(0);
+  }
+
+  #translator-boxes {
+    flex-direction: row;
+    gap: 0.25rem;
+
+  }
+
+  .translator-box {
+    margin: 0;
+  }
+}

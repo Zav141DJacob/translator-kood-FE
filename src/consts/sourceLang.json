@@ -1,0 +1,118 @@
+[
+    {
+        "short": "EN",
+        "long": "English"
+    },
+    {
+        "short": "BG",
+        "long": "Bulgarian"
+    },
+    {
+        "short": "CS",
+        "long": "Czech"
+    },
+    {
+        "short": "DA",
+        "long": "Danish"
+    },
+    {
+        "short": "DE",
+        "long": "German"
+    },
+    {
+        "short": "EL",
+        "long": "Greek"
+    },
+    {
+        "short": "ES",
+        "long": "Spanish"
+    },
+    {
+        "short": "ET",
+        "long": "Estonian"
+    },
+    {
+        "short": "FI",
+        "long": "Finnish"
+    },
+    {
+        "short": "FR",
+        "long": "French"
+    },
+    {
+        "short": "HU",
+        "long": "Hungarian"
+    },
+    {
+        "short": "ID",
+        "long": "Indonesian"
+    },
+    {
+        "short": "IT",
+        "long": "Italian"
+    },
+    {
+        "short": "JA",
+        "long": "Japanese"
+    },
+    {
+        "short": "KO",
+        "long": "Korean"
+    },
+    {
+        "short": "LT",
+        "long": "Lithuanian"
+    },
+    {
+        "short": "LV",
+        "long": "Latvian"
+    },
+    {
+        "short": "NB",
+        "long": "Norwegian (Bokmål)"
+    },
+    {
+        "short": "NL",
+        "long": "Dutch"
+    },
+    {
+        "short": "PL",
+        "long": "Polish"
+    },
+    {
+        "short": "PT",
+        "long": "Portuguese"
+    },
+    {
+        "short": "RO",
+        "long": "Romanian"
+    },
+    {
+        "short": "RU",
+        "long": "Russian"
+    },
+    {
+        "short": "SK",
+        "long": "Slovak"
+    },
+    {
+        "short": "SL",
+        "long": "Slovenian"
+    },
+    {
+        "short": "SV",
+        "long": "Swedish"
+    },
+    {
+        "short": "TR",
+        "long": "Turkish"
+    },
+    {
+        "short": "UK",
+        "long": "Ukrainian"
+    },
+    {
+        "short": "ZH",
+        "long": "Chinese"
+    }
+]

@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+textarea {
+    height: 10rem;
+    margin-top: 0.25rem;
+    resize: none;
+    width: 100%;
+    max-width: calc(100% - 2rem);
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+/* Remove styling from button */
+/* https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit */
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: inherit;
+    outline: inherit;
+}
+
+
+/* https://freefrontend.com/css-select-boxes/ */
+/* https://codepen.io/raubaca/pen/bGWmZje */
+select,
+button {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+
+    /* Personalize */
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 3em, rgba(255, 255, 255, 0.1) 3em);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+
+
+}
+
+/* <option> colors */
+option {
+    color: inherit;
+    background-color: white;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+
+button:hover,
+select:hover{
+    /* https://tailwindcss.com/docs/transition-property */
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 350ms;
+
+
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+button:hover {
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
+}
+
+select:hover {
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+}
