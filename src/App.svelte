@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Route, Router } from "svelte-routing"
-  import Counter from './lib/Counter.svelte'
   import Translator from './pages/Translator.svelte'
     import History from "./pages/History.svelte";
 </script>

@@ -1,9 +1,11 @@
 <script lang="ts">
     import sourceLang from "../consts/sourceLang.json";
     import targetLang from "../consts/targetLang.json";
+
     export let placeholder: undefined | string = undefined;
     export let isSource: boolean = false;
     export let isDisabled: boolean = false;
+    
     let counter = 0;
     const updateCounter = (event: Event) => {
         const target = event.target as HTMLTextAreaElement;
